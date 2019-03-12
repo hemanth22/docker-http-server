@@ -2,8 +2,18 @@
 
 Default container run on the 3000 port.
 
-## Usage 
+## Usage
 
-docker pull utkudarilmaz/http.server
+	git clone https://github.com/utkudarilmaz/docker-http.server.git
 
-docker run -p 80:3000 -v <web-dir>/:/usr/app/ -d utkudarilmaz/http.server
+	cd docker-http.server
+
+	docker build -t http.server:latest .
+	
+	docker run -p 80:3000 -v <web-dir>/:/usr/app/ -d http.server:latest
+	 
+### Or:
+
+	docker pull utkudarilmaz/http.server
+
+	docker run -p 80:3000 -v <web-dir>/:/usr/app/ -d utkudarilmaz/http.server:latest
