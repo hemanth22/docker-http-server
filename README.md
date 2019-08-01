@@ -1,6 +1,6 @@
 # Docker http server Container
 
-Quickly serve static files using Python http.server. 
+Quickly serve static files using Python http.server module. 
 Default container run on the 3000 port.
 
 ## Usage ##

@@ -1,9 +1,14 @@
 FROM alpine:latest
 
-RUN mkdir -p /usr/app
+MAINTAINER S. Utku DARILMAZ <utkudarilmaz@gmail.com>
+LABEL Quickly serve static files using Python http.server module.
+
 WORKDIR /usr/app
-RUN echo "Hello World" > index.html
-RUN apk add python3
+
+RUN echo "Hello World" > index.html && \
+  apk add python3 && \
+  rm -rf /tmp/* && \
+  rm -rf /var/cache/* 
 
 ENTRYPOINT ["python3", "-m", "http.server"]
-CMD ["3000"]
+CMD ["8080"]
