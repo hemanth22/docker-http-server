@@ -1,13 +1,13 @@
 # Docker http server Container
 
 Quickly serve static files using Python http.server module. 
-Default container run on the 3000 port.
+On default, container serves files via 8080 port to 0.0.0.0
 
 ## Usage ##
 
 ``` cmd
 docker pull utkudarilmaz/http-server
-docker run -d -v <web-dir>/:/usr/app utkudarilmaz/http-server:latest
+docker run -d -v <web-dir>/:/usr/app utkudarilmaz/http-server:latest [port]
 ```
 
 ## Build ##
