@@ -1,19 +1,20 @@
-# Docker http.server Container
+# Docker http server Container
 
+Quickly serve static files using Python http.server. 
 Default container run on the 3000 port.
 
-## Usage
+## Usage ##
 
-	git clone https://github.com/utkudarilmaz/docker-http.server.git
+``` cmd
+docker pull utkudarilmaz/http-server
+docker run -d -v <web-dir>/:/usr/app utkudarilmaz/http-server:latest
+```
 
-	cd docker-http.server
+## Build ##
 
-	docker build -t http.server:latest .
-	
-	docker run -p 80:3000 -v <web-dir>/:/usr/app/ -d http.server:latest
-	 
-### Or:
+``` cmd
+git clone https://github.com/utkudarilmaz/docker-http-server.git
+cd docker-http-server
+docker build -t http-server:latest .
+``` 
 
-	docker pull utkudarilmaz/http.server
-
-	docker run -p 80:3000 -v <web-dir>/:/usr/app/ -d utkudarilmaz/http.server:latest
