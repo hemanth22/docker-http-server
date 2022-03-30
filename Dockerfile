@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.15.3
 
 MAINTAINER Hemanth BITRA <hemanthbitra@live.com>
 LABEL Quickly serve static files using Python http.server module.
